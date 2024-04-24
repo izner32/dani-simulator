@@ -28,21 +28,22 @@ const CFG = ({ prob2 }) => {
           <PopoverArrow />
           <PopoverCloseButton />
           <PopoverHeader fontWeight="semibold">
-            Context-free Grammar
+            Context-Free Grammar
           </PopoverHeader>
           <PopoverBody align="center">
             {!prob2 ? (
               <VStack>
-                <Text>{"S -> abaX | babX"}</Text>
-                <Text>{"X -> aX | bX | babY"}</Text>
-                <Text>{"Y -> aZ | bZ"}</Text>
-                <Text>{"Z -> aZ | bZ | aaZ | ^"}</Text>
+                <Text>{"S → bX | aaX | abX"}</Text>
+                <Text>{"X → aX | bX | aaaY | bbbY"}</Text>
+                <Text>{"Y → aZ | bZ"}</Text>
+                <Text>{"Z → aZ | bZ | ^"}</Text>
               </VStack>
             ) : (
               <VStack>
-                <Text>{"S -> 1X | 0X"}</Text>
-                <Text>{"X -> 1X | 0X | 111Y | 000Y | 101Y"}</Text>
-                <Text>{"Y -> 1Y | 0X | ^"}</Text>
+                <Text>{"S → 1S | 0S | 11X | 00X | 101X | 010X"}</Text>
+                <Text>{"X → 1X | 0X | 11Y | 00Y"}</Text>
+                <Text>{"Y → 1Z | 0Z"}</Text>
+                <Text>{"Z → 1Z | 0Z | ^"}</Text>
               </VStack>
             )}
           </PopoverBody>
