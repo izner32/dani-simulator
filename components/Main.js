@@ -7,9 +7,6 @@ Rules
 Regex 1:
 Valid: abaaaabbbb
 */
-
-
-
 import { Flex, useToast, Divider } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -56,6 +53,7 @@ const Main = () => {
   const handleSwitch = () => {
     setProb2((prev) => !prev);
     setData([]);
+    setStrings([])
     closeAll();
   };
 
