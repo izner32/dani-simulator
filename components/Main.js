@@ -1,3 +1,15 @@
+/* 
+Rules
+- accepts 5 input string
+- check if the 5 input string is valid DFA or not
+- execute simulation for a single input string 
+
+Regex 1:
+Valid: abaaaabbbb
+*/
+
+
+
 import { Flex, useToast, Divider } from "@chakra-ui/react";
 import { useState } from "react";
 
@@ -10,7 +22,8 @@ const Main = () => {
   const regex2 = "(1+0)* (11+00+101+010) (1+0+11+00+101)* (11+00) (11+00+101)* (1+0) (1+0+11)*";
 
   const [string, setString] = useState("");
-  const [data, setData] = useState("");
+  const [strings, setStrings] = useState([]);
+  const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
 
   const [prob2, setProb2] = useState(false);
@@ -29,18 +42,20 @@ const Main = () => {
   const handleTextChange = (e) => {
     const stringValue = e.target.value;
     setString(stringValue);
+
     const countValue = e.target.value.length;
     setCount(countValue);
   };
   const handleReset = () => {
     setString("");
     setCount(0);
-    setData("");
+    setData([]);
+    setStrings([])
     closeAll();
   };
   const handleSwitch = () => {
     setProb2((prev) => !prev);
-    setData("");
+    setData([]);
     closeAll();
   };
 
@@ -80,19 +95,19 @@ const Main = () => {
     // console.log("DONE OK");
     setSimulating(false);
     validToast();
-    setData(results);
+    setData([...data, results]);
   };
   const handleTrapped = () => {
     // console.log("DONE TRAPPED");
     setSimulating(false);
     trapToast();
-    setData(results);
+    setData([...data, results]);
   };
   const handleShort = () => {
     // console.log("DONE SHORT");
     setSimulating(false);
     shortToast();
-    setData(results);
+    setData([...data, results]);
   };
 
   const handleInputString = () => {
@@ -111,7 +126,7 @@ const Main = () => {
         // console.log("PROB1");
         results = new DFA(input, problem1, language1);
         // console.log(results);
-        setData(results);
+        setData([...data, results]);
       } else {
         notInLanguageToast();
         // console.log("No valid configuration for input string!!");
@@ -124,7 +139,7 @@ const Main = () => {
         // console.log("PROB2");
         results = new DFA(input, problem2, language2);
         // console.log(results);
-        setData(results);
+        setData([...data, results]);
       } else {
         notInLanguageToast();
         // console.log("No valid configuration for input string!!");
@@ -135,6 +150,8 @@ const Main = () => {
   const handleSimulation = (e) => {
     e.preventDefault();
     handleInputString();
+
+    setStrings([...strings, string])
 
     if (!prob2) {
       if (input == "") {
@@ -202,6 +219,8 @@ const Main = () => {
         data={data}
         prob2={prob2}
         string={string}
+        strings={strings}
+        setStrings={setStrings}
         handleTextChange={handleTextChange}
         simulating={simulating}
         handleSimulation={handleSimulation}

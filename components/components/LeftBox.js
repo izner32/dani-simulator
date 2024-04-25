@@ -10,6 +10,8 @@ import {
   Code,
 } from "@chakra-ui/react";
 
+import { Fragment } from 'react'
+
 import { FaCheck } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 
@@ -18,6 +20,8 @@ const LeftBox = ({
   data,
   prob2,
   string,
+  strings,
+  setStrings,
   handleReset,
   handleTextChange,
   handleSimulation,
@@ -34,7 +38,7 @@ const LeftBox = ({
         mt={[14, 14, 16, 16, 16, 0]}
       >
         <Flex align="flex-end" justify="space-between">
-          <Heading variant="title">DFA Simulator</Heading>
+          <Heading variant="title">Dani Simulator</Heading>
           <Code fontSize={["0.5em", null, "0.6em", null, null, "0.6em"]}>
             BETA
           </Code>
@@ -46,27 +50,30 @@ const LeftBox = ({
           <form onSubmit={handleTest}>
             <Flex align="center">
               <Heading>Input String:</Heading>
-              <Flex align="center">
-                {data && (
-                  <Button
-                    variant="data"
-                    rightIcon={
-                      data.result == "Valid" ? (
-                        <Box color="teal.300">
-                          <FaCheck />
-                        </Box>
-                      ) : (
-                        data.result == "Invalid" && (
-                          <Box color="pink.300">
-                            <ImCross />
+              <Flex align="center"  wrap="wrap">
+                {data.length > 0 && data.map((item, index) => (
+                  <Fragment key={index}>
+                    <Button
+                      style={{ marginBottom: '4px', marginTop: '4px' }}
+                      variant="data"
+                      rightIcon={
+                        item.result === "Valid" ? (
+                          <Box color="teal.300">
+                            <FaCheck />
                           </Box>
+                        ) : (
+                          item.result === "Invalid" && (
+                            <Box color="pink.300">
+                              <ImCross />
+                            </Box>
+                          )
                         )
-                      )
-                    }
-                  >
-                    {data.result}
-                  </Button>
-                )}
+                      }
+                    >
+                      {`${strings[index]} - ${item.result}`}
+                    </Button>
+                  </Fragment>
+                ))}
               </Flex>
             </Flex>
             <Input
@@ -79,7 +86,7 @@ const LeftBox = ({
             />
             <Flex justify="space-between" align="center">
               <Flex>
-                <Button type="submit" disabled={simulating}>
+                <Button type="submit" disabled={simulating} onClick={() => setStrings([...strings, string])}>
                   Validate
                 </Button>
                 <Button
