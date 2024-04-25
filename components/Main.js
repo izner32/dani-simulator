@@ -51,6 +51,7 @@ const Main = () => {
     closeAll();
   };
   const handleSwitch = () => {
+    setString("");
     setProb2((prev) => !prev);
     setData([]);
     setStrings([])
