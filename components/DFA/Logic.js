@@ -85,16 +85,15 @@ export const problem1 = [
 ];
 
 export const problem2 = [
-  new Node(1, 2, 4),
-  new Node(2, 6, 3),
-  new Node(3, 6, 6),
-  new Node(4, 5, 6),
-  new Node(5, 6, 6),
-  new Node(6, 7, 8),
-  new Node(7, 9, 6),
-  new Node(8, 6, 9),
-  new Node(9, 10, 10),
-  new Node(10, 10, 10),
+  new Node(1, 2, 3),
+  new Node(2, 5, 4),
+  new Node(3, 4, 5),
+  new Node(4, 5, 5),
+  new Node(5, 6, 7),
+  new Node(6, 8, 5),
+  new Node(7, 5, 8),
+  new Node(8, 9, 9),
+  new Node(9, 9, 9)
 ];
 
 export const language1 = ["a", "b"];
