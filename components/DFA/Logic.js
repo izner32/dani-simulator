@@ -76,10 +76,10 @@ export const problem1 = [
   new Node(1, 2, 3),
   new Node(2, 3, 3),
   new Node(3, 4, 6),
-  new Node(4, 5, 3),
-  new Node(5, 8, 3),
-  new Node(6, 3, 7),
-  new Node(7, 3, 8),
+  new Node(4, 5, 6),
+  new Node(5, 8, 6),
+  new Node(6, 4, 7),
+  new Node(7, 4, 8),
   new Node(8, 9, 9),
   new Node(9, 9, 9)
 ];
