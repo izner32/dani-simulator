@@ -39,12 +39,12 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         0
       </Text>
       {/* q2 q5 */}
-      <Text top={["16.5%", "16.5%", "16%", "16%", "16%", "15%"]} left="30%" size="label">
+      <Text top={["16.5%", "16.5%", "16%", "16%", "16%", "15%"]} left="35%" size="label">
         0
       </Text>
       {/* q3 q5 */}
-      <Text top="84%" left="30%" size="label">
-        0
+      <Text top="84%" left="35%" size="label">
+        1
       </Text>
       {/* q4 q5 */}
       <Text top={["46.5%", "46.5%", "45.5%", "45.5%", "45.5%", "45%"]} left="40%" size="label">
