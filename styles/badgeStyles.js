@@ -41,49 +41,49 @@ export const Badge = {
       top: "20%",
       left: "20%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     q3: {
       top: "50%",
       left: "30%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     q4: {
       top: "20%",
       left: "40%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     q5: {
       top: "20%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     q6: {
       top: "80%",
       left: "40%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     q7: {
       top: "80%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     q8: {
       top: "50%",
       left: "70%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     q9: {
       top: "50%",
       left: "90%",
 
-      borderColor: "pink.300",
+      borderColor: "purple.300",
     },
     1: {
       top: "50%",
@@ -95,49 +95,49 @@ export const Badge = {
       top: "20%",
       left: "20%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     3: {
       top: "80%",
       left: "20%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     4: {
       top: "50%",
       left: "30%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     5: {
       top: "50%",
       left: "50%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     6: {
       top: "20%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     7: {
       top: "80%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     8: {
       top: "50%",
       left: "70%",
 
-      borderColor: "purple.300",
+      borderColor: "pink.300",
     },
     9: {
       top: "50%",
       left: "90%",
 
-      borderColor: "pink.300",
+      borderColor: "purple.300",
     },
   },
   defaultProps: {

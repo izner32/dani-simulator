@@ -74,6 +74,14 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
       <Text top={["27.5%", "27.5%", "29%", "29%", "29%", "27.5%"]} left="90%" size="label">
         0,1
       </Text>
+      {/* q7 q6 */}
+      <Text top="50%" left={["57.5%", "57.5%", "58%", "58%", "58%", "58%"]} size="label">
+        0
+      </Text>
+      {/* q6 q7 */}
+      <Text top="50%" left={["62.5%", "62.5%", "62%", "62%", "62%", "62%"]} size="label">
+        1
+      </Text>
       {/* ARROW BODY */}
       {/* q1 q2 */}
       <ArrowBody
@@ -155,6 +163,20 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         left={["46.2%", "46.2%", "48.4%", "48.4%", "48.4%", "48.9%"]}
         rotate={["120", "120", "127", "127", "127", "138"]}
       />
+      {/* q6 q7 */}
+      <ArrowBody
+        w={["7em", "7em", "11em", "11em", "11em", "11em"]}
+        top="50%"
+        left={["54.2%", "54.2%", "56.6%", "56.6%", "56.6%", "57.41%"]}
+        rotate="90"
+      />
+      {/* q7 q6 */}
+      <ArrowBody
+        w={["7em", "7em", "11em", "11em", "11em", "11em"]}
+        top="50%"
+        left={["56.3%", "56.3%", "58.7%", "58.7%", "58.6%", "59.45%"]}
+        rotate="90"
+      />
       {/* ARROW HEAD */}
       {/* q1 q3 */}
       <ArrowHead
@@ -225,6 +247,18 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
       <ArrowHead
         top={["50.3%", "50.2%", "49.8%", "49.8%", "49.9%", "49.8%"]}
         left={["84%", "84%", "85.2%", "85.2%", "85.3%", "86.5%"]}
+      />
+      {/* q7 q6 */}
+      <ArrowHead
+        top={["30%", "30%", "30.4%", "30.4%", "30.2%", "31%"]}
+        left="59%"
+        rotate="-90"
+      />
+      {/* q6 q7 */}
+      <ArrowHead
+        top={["70%", "70%", "69.7%", "69.7%", "69.5%", "68.9%"]}
+        left="61%"
+        rotate="90"
       />
       {/* ARROWLOOP */}
       {/* q9 */}

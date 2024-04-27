@@ -13,6 +13,7 @@ export const ArrowHead = ({ top, left, rotate }) => {
         pos="absolute"
         translateX="-50%"
         translateY="-50%"
+        color="gray.700"
         transform="auto"
       >
         <MdKeyboardArrowRight size="1.2em" />
