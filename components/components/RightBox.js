@@ -5,6 +5,7 @@ import { CgChevronRight } from "react-icons/cg";
 import FirstDFA from "../DFA/FirstDFA";
 import SecondDFA from "../DFA/SecondDFA";
 import CFG from "./CFG";
+import PDA from "./PDA"
 
 const RightBox = ({
   prob2,
@@ -46,6 +47,7 @@ const RightBox = ({
             Regular Expression: <Tag as="span">{!prob2 ? regex1 : regex2}</Tag>
           </Heading>
           <Flex>
+            <PDA prob2={prob2} />
             <CFG prob2={prob2} />
             <Button
               disabled={simulating}
