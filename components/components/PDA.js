@@ -81,7 +81,7 @@ const PDA = ({ prob2 }) => {
     <>
       <Button onClick={onOpen}>Show PDA</Button>
 
-      <Modal isOpen={isOpen} onClose={onClose} size={'2xl'}>
+      <Modal isOpen={isOpen} onClose={onClose} size={'md'}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>PDA</ModalHeader>
