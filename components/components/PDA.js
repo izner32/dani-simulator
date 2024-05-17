@@ -84,7 +84,7 @@ const PDA = ({ prob2 }) => {
       <Modal isOpen={isOpen} onClose={onClose} size={'2xl'}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>PDA</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Image
