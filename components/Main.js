@@ -229,7 +229,7 @@ const Main = () => {
 
             // console.log(node)
 
-          }, i * 500);
+          }, i * 200);
         });
       } else {
         notInLanguageToast();
