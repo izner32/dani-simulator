@@ -5,6 +5,7 @@ export const Button = {
   sizes: {
     regular: {
       fontSize: ["0.7em", "0.7em", "0.9em"],
+      color: "pink.600",
       px: "4",
       py: "2",
     },
@@ -18,11 +19,11 @@ export const Button = {
       ml: "3",
       mr: "1",
       fontWeight: "bold",
-      color: "gray.700",
+      color: "pink.600",
       textTransform: "uppercase",
 
       fontSize: ["0.7em", "0.7em", "0.9em"],
-      bg: "gray.100",
+      bg: "pink.50",
     },
     clear: {
       bg: "none",

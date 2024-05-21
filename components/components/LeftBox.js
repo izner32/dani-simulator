@@ -38,9 +38,9 @@ const LeftBox = ({
         mt={[14, 14, 16, 16, 16, 0]}
       >
         <Flex align="flex-end" justify="space-between">
-          <Heading variant="title">Dani Simulator</Heading>
+          <Heading variant="title">DFA Simulator</Heading>
           <Code fontSize={["0.5em", null, "0.6em", null, null, "0.6em"]}>
-            BETA
+            BCS34 Group 3
           </Code>
         </Flex>
 

@@ -6,13 +6,13 @@ export const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
-        bg: props.colorMode === "dark" ? "gray.800" : "gray.50",
+        bg: props.colorMode === "dark" ? "pink.600" : "gray.50",
       },
       p: {
-        color: "gray.700",
+        color: "pink.600",
       },
       "h1, h2, h3, h4": {
-        color: "gray.700",
+        color: "pink.600",
       },
     }),
   },
@@ -22,12 +22,12 @@ export const theme = extendTheme({
   },
   textStyles: {
     Primary: {
-      color: "blue.300",
+      color: "pink.600",
     },
   },
   layerStyles: {
     Primary: {
-      bgColor: "blue.300",
+      bgColor: "pink.600",
     },
   },
   components: {

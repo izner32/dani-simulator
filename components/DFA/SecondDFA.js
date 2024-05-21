@@ -152,7 +152,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
       {/* q2 q5 q7 */}
       <ArrowBody
         w={["8em", "8em", "13.5em", "13.5em", "13.5em", "16em"]}
-        top="53%"
+        top="53.4%"
         left={["45.7%", "45.7%", "48%", "48%", "48%", "48.9%"]}
         rotate={["60", "60", "54", "54", "54", "42"]}
       />
@@ -275,7 +275,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 1 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q1
+        -
       </Atom>
       <Atom
         variant="2"
@@ -284,7 +284,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 2 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q2
+        
       </Atom>
       <Atom
         variant="3"
@@ -293,7 +293,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 3 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q3
+        
       </Atom>
       <Atom
         variant="4"
@@ -302,7 +302,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 4 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q4
+        
       </Atom>
       <Atom
         variant="5"
@@ -311,7 +311,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 5 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q5
+        
       </Atom>
       <Atom
         variant="6"
@@ -320,7 +320,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 6 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q6
+        
       </Atom>
       <Atom
         variant="7"
@@ -329,7 +329,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 7 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q7
+        
       </Atom>
       <Atom
         variant="8"
@@ -338,7 +338,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 8 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q8
+        
       </Atom>
       <Atom
         variant="9"
@@ -347,7 +347,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         animate={currentNodeVal == 9 ? "pulse" : ""}
         whileHover={!simulatingStatus && "scale"}
       >
-        q9
+        +
       </Atom>
     </>
   );
