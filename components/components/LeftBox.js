@@ -70,7 +70,7 @@ const LeftBox = ({
                         )
                       }
                     >
-                      {`${strings[index]} - ${item.result}`}
+                      {`${item.input} - ${item.result}`}
                     </Button>
                   </Fragment>
                 ))}

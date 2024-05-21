@@ -94,7 +94,15 @@ const Main = () => {
     // console.log("DONE OK");
     setSimulating(false);
     validToast();
+
+    // add [] for nodes of the valid path...remaining nodes after the end state should be outside the brackets
+    if (results.result === "Valid") {
+      const part1 = results.input.substring(0, results.currentInputPos + 1);
+      const part2 = results.input.substring(results.currentInputPos + 1)
+      results.input = `[${part1}]${part2}`
+    }
     setData([...data, results]);
+    console.log(data)
   };
   const handleTrapped = () => {
     // console.log("DONE TRAPPED");
@@ -125,6 +133,14 @@ const Main = () => {
         // console.log("PROB1");
         results = new DFA(input, problem1, language1);
         // console.log(results);
+
+        // add [] for nodes of the valid path...remaining nodes after the end state should be outside the brackets
+        if (results.result === "Valid") {
+          const part1 = results.input.substring(0, results.currentInputPos + 1);
+          const part2 = results.input.substring(results.currentInputPos + 1)
+          results.input = `[${part1}]${part2}`
+        }
+
         setData([...data, results]);
       } else {
         notInLanguageToast();
@@ -138,6 +154,14 @@ const Main = () => {
         // console.log("PROB2");
         results = new DFA(input, problem2, language2);
         // console.log(results);
+
+        // add [] for nodes of the valid path...remaining nodes after the end state should be outside the brackets
+        if (results.result === "Valid") {
+          const part1 = results.input.substring(0, results.currentInputPos + 1);
+          const part2 = results.input.substring(results.currentInputPos + 1)
+          results.input = `[${part1}]${part2}`
+        }
+
         setData([...data, results]);
       } else {
         notInLanguageToast();
@@ -175,6 +199,9 @@ const Main = () => {
               : pathWithZeroes.slice(-4)[3 - 1] == node &&
                 !pathWithZeroes.includes("T") &&
                 handleShort();
+
+            // console.log(node)
+
           }, i * 200);
         });
       } else {
@@ -199,7 +226,10 @@ const Main = () => {
             !pathWithZeroes.includes("eos")
               ? handleValid()
               : pathWithZeroes.slice(-4)[3 - 1] == node && handleShort();
-          }, i * 200);
+
+            // console.log(node)
+
+          }, i * 500);
         });
       } else {
         notInLanguageToast();
